@@ -13,14 +13,6 @@
     width: 70%;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-	width:387;
-	height:259;
-}
-
 .main {
     display: block;
     margin-left: 5%;
@@ -104,7 +96,7 @@ ul li:hover > ul {
     }
 
     #mainmenu > li:hover > a {
-        background: #BD3C26;
+        background: #B32434;
         color: #3a6bc4;
     }
 
@@ -112,7 +104,7 @@ ul li:hover > ul {
     #mainmenu ul {
         font-size: 16px;
         border-radius: 3px;
-        background: #BD3C26;
+        background: #9E2B29;
     }
 
         #mainmenu ul li > a {
@@ -125,7 +117,7 @@ ul li:hover > ul {
 
         #mainmenu ul li:hover > a {
             color: #eee;
-            background: #aaa;
+            background: #B32434;
         }
         /*strzałi pokazujące rozwijane menu*/
 .arrow {
@@ -174,6 +166,11 @@ ul ul .arrow {
     background-color: #696969;
 }
 
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 h1 {
     text-align: center;
