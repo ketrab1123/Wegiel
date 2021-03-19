@@ -13,6 +13,9 @@
     width: 70%;
 	cursor: default;
 }
+h1 {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
 
 .main {
     display: block;
@@ -30,6 +33,7 @@
     justify-content: center;
     background-color: #a52a2a;
     z-index: 5;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 #mainmenu, #mainmenu ul {
     list-style: none;
@@ -93,12 +97,12 @@ ul li:hover > ul {
         border-radius: 3px;
         text-align: center;
         text-decoration: none;
-        color: #4c8bff;
+        color: #ebe7eb;
     }
 
     #mainmenu > li:hover > a {
         background: #B32434;
-        color: #3a6bc4;
+        color: #ebe7eb;
     }
 
     /*POZIOMY NIŻSZE*/
