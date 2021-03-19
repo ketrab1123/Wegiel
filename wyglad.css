@@ -1,6 +1,6 @@
 ﻿body {
     background-color: black;
-    background-image: url("wegiel2.jpg");
+    background-image: url("wegiel.jpg");
     background-attachment: fixed;
     color: whitesmoke;
     background-position: center;
@@ -11,6 +11,14 @@
     position: absolute;
     align-items: center;
     width: 70%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width:387;
+	height:259;
 }
 
 .main {
@@ -28,6 +36,7 @@
     display: flex;
     justify-content: center;
     background-color: #a52a2a;
+    z-index: 5;
 }
 #mainmenu, #mainmenu ul {
     list-style: none;
@@ -70,17 +79,20 @@ ul ul {
 
 ul li:hover > ul {
     display: block;
+    z-index:5;
 }
 /*          1 linia menu*/
-#mainmenu {
+.nav {
+    font-size: 24px;
     font-family: calibri;
-    width: 100%;
-    height: 25px;
+    height: auto;
     display: flex;
     background-color: #a52a2a;
     text-align: center;
     padding: inherit;
     margin: 0 auto;
+}
+#mainmenu {
 }
 
     #mainmenu > li > a {
@@ -92,7 +104,7 @@ ul li:hover > ul {
     }
 
     #mainmenu > li:hover > a {
-        background: #dc5c53;
+        background: #BD3C26;
         color: #3a6bc4;
     }
 
@@ -100,7 +112,7 @@ ul li:hover > ul {
     #mainmenu ul {
         font-size: 16px;
         border-radius: 3px;
-        background: #dc5c53;
+        background: #BD3C26;
     }
 
         #mainmenu ul li > a {
@@ -159,14 +171,9 @@ ul ul .arrow {
     width: 100%;
     margin: 0 auto;
     float: left;
-    background-color: dimgrey;
+    background-color: #696969;
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 h1 {
     text-align: center;
@@ -185,3 +192,44 @@ h1 {
     line-height: 1.5;
     border-top: 1px solid #ccc;
 }
+/*galeria*/
+.galeria {
+    background-color: #696969;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo {
+    background-color: #000;
+    margin: 10px 0px;
+    width: 40%;
+    padding: 10px;
+    opacity: 0.65;
+    border: 1px solid silver;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-height: 3%;
+    z-index: 1;
+}
+
+    .photo img {
+        width: 20%;
+        flex-basis: 100%;
+    height: 300px;
+    }
+
+    .photo figcaption {
+        margin-top: 16px;
+    }
+
+    /*"animacje"*/
+    .photo:hover {
+        opacity: 1;
+        transition: 0.3s all linear;
+        transform: scale(1.5);
+        z-index: 2;
+    }
+/*koniec*/
