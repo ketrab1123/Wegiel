@@ -25,6 +25,9 @@
 
 /*MENU - lista*/
 .menu {
+    display: flex;
+    justify-content: center;
+    background-color: #a52a2a;
 }
 #mainmenu, #mainmenu ul {
     list-style: none;
@@ -121,7 +124,11 @@ ul li:hover > ul {
     content: "";
     position: absolute;
 }
-
+/*
+    #mainmenu > li:hover .arrow-down::after {
+    content: "↓";
+}
+*/
 #mainmenu > li > a > .arrow {
     top: 17px;
     right: 0;
