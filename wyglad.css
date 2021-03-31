@@ -1,11 +1,10 @@
 ﻿body {
     background-color: black;
-    background-image: url("wegiel.jpg");
+    background-image: url("galeria/wegiel.jpg");
     background-attachment: fixed;
     color: whitesmoke;
     background-position: center;
-    margin: 0 auto;
-    margin: 0 auto;
+    margin: 0 auto; 
     display: block;
     margin-left: 15%;
     position: absolute;
@@ -14,7 +13,8 @@
 	cursor: default;
 }
 h1 {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: center;
 }
 img {
     width: 387px;
@@ -73,7 +73,7 @@ img {
             #mainmenu > li ul li ul {
                 position: absolute;
                 left: 160px;
-                top: 0px;
+                
             }
 
 ul ul {
@@ -171,12 +171,15 @@ ul ul .arrow {
     float: left;
     background-color: #696969;
 }
+.mapa 
+{
+    width:98%;
+    min-height:500px;
+    height:90%;
 
-
-h1 {
-    text-align: center;
 }
 
+/*Stopka*/
 .footer {
     background-color: #a52a2a;
     color: yellow;
@@ -190,6 +193,46 @@ h1 {
     line-height: 1.5;
     border-top: 1px solid #ccc;
 }
+/*ikony*/
+.socials
+{
+margin: 0 auto;
+padding: 5px;
+}
+.icon-btn {
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.facebook
+{
+    color:#3B5998
+}
+    .facebook:hover {
+        background-color: #3B5998;
+        transform: scale(1.10);
+        color: #FFFFFF
+    }
+.instagram {
+    color: #F77737;
+}
+    .instagram:hover {
+        background-image: linear-gradient(to right bottom, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+        background-color: #F77737;
+        transform: scale(1.10);
+        color: #FFFFFF
+    }
+.github {
+    color: #4183C4;
+}
+.github:hover 
+{
+    transform:scale(1.1);
+    color:#FFFFFF;
+    background-color: #4183C4;
+}
 /*galeria*/
 .galeria {
     background-color: #696969;
@@ -200,7 +243,7 @@ h1 {
 
 .photo {
     background-color: #000;
-    margin: 10px 0px;
+    margin: 10px;
     width: 40%;
     padding: 10px;
     opacity: 0.65;
