@@ -11,7 +11,51 @@
     align-items: center;
     width: 70%;
 	cursor: default;
+	
 }
+::-webkit-scrollbar {
+    width: 4px;
+    -webkit-transition: all 30ms;
+    transition: all 30ms;
+}
+::-webkit-scrollbar-track {
+    background-color: #00007c;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #ffb428;
+    border-left: 1px solid #00007c;
+    border-right: 1px solid #00007c;
+}
+::-ms-scrollbar {
+    width: 4px;
+    -webkit-transition: all 30ms;
+    transition: all 30ms;
+}
+::-ms-scrollbar-track {
+    background-color: #00007c;
+}
+::-ms-scrollbar-thumb {
+    border-radius: 4px;
+    background: #ffb428;
+    border-left: 1px solid #00007c;
+    border-right: 1px solid #00007c;
+}
+::-moz-scrollbar {
+    width: 4px;
+    -webkit-transition: all 30ms;
+    transition: all 30ms;
+}
+::-moz-scrollbar-track {
+    background-color: #00007c;
+}
+::-moz-scrollbar-thumb {
+    border-radius: 4px;
+    background: #ffb428;
+    border-left: 1px solid #00007c;
+    border-right: 1px solid #00007c;
+}
+
 h1 {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-align: center;
@@ -84,7 +128,7 @@ ul li:hover > ul {
     display: block;
     z-index:5;
 }
-/*          1 linia menu*/
+/*          1 linia menu */
 .nav {
     font-size: 24px;
     font-family: calibri;
