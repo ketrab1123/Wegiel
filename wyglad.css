@@ -31,13 +31,6 @@ h1 {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-align: center;
 }
-img {
-    width: 387px;
-    height: 259px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 .main {
     display: block;
     margin-left: 5%;
@@ -252,6 +245,7 @@ padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+	height: 100%;
 }
 
 .photo {
@@ -265,7 +259,7 @@ padding: 5px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    z-index: 1;
+    z-index: 0;
 }
 
 
