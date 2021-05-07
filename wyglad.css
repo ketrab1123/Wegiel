@@ -292,7 +292,7 @@ padding: 5px;
 }
 
 .column {
-    -ms-flex: 25%; /* IE10 */
+    -ms-flex: 25%;
     flex: 25%;
     max-width: 24%;
     padding: 0 4px;
