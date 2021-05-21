@@ -180,6 +180,8 @@ ul ul .arrow {
 
 .zadanie {
     width: 100%;
+    min-height: 500px;
+    height: 100px;
     margin: 0 auto;
     float: left;
     background-color: #696969;
@@ -189,11 +191,13 @@ ul ul .arrow {
     width:98%;
     min-height:500px;
     height:90%;
-
+}
+#map {
+    height: 100%;
 }
 
 /*Stopka*/
-.footer {
+    .footer {
     background-color: #a52a2a;
     color: yellow;
     text-transform: uppercase;
@@ -216,25 +220,28 @@ padding: 5px;
     color: #FFFFFF;
     border: none;
     border-radius: 50%;
-    margin: 0 auto;
+    margin-left: 30px;
     cursor: pointer;
+    transform: scale(1.7);
 }
-.facebook
-{
-    color:#3B5998
-}
+    .icon-btn:hover {
+        transform: scale(1.9);
+    }
+    .facebook {
+        color: #3B5998
+    }
     .facebook:hover {
         background-color: #3B5998;
-        transform: scale(1.10);
         color: #FFFFFF
     }
 .instagram {
     color: #F77737;
+  
 }
     .instagram:hover {
         background-image: linear-gradient(to right bottom, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
         background-color: #F77737;
-        transform: scale(1.10);
+      
         color: #FFFFFF
     }
 .github {
@@ -242,10 +249,10 @@ padding: 5px;
 }
 .github:hover 
 {
-    transform:scale(1.1);
     color:#FFFFFF;
     background-color: #4183C4;
 }
+
 /*galeria*/
 .galeria {
     background-color: #696969;
@@ -292,7 +299,7 @@ padding: 5px;
 }
 
 .column {
-    -ms-flex: 25%;
+    -ms-flex: 25%; /* IE10 */
     flex: 25%;
     max-width: 24%;
     padding: 0 4px;
@@ -309,6 +316,7 @@ padding: 5px;
         -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
+
     }
 }
 
