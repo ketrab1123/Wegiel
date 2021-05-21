@@ -2,6 +2,90 @@
 
 <html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>
+        var Tomex = { lat: 50.31081221125647, lng: 17.764670864977933 };
+        const citymap = {
+            Gratis: {
+                center: Tomex,
+                wielkosc: 1,
+            },
+        };
+        const citymaps = {
+            Gratis: {
+                center: Tomex,
+                wielkosc: 2,
+            },
+        };
+
+        function initMap() {
+            // Create the map.
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: Tomex,
+                mapTypeId: "roadmap"
+            });
+
+            // Construct the circle for each value in citymap.
+            // Note: We scale the area of the circle based on the population.
+            for (const city in citymap) {
+                // Add the circle for this city to the map.
+                const Gratis = new google.maps.Circle({
+                    strokeColor: "#7b0000",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#B22222",
+                    fillOpacity: 0.45,
+                    map,
+                    center: citymap[city].center,
+                    radius: Math.sqrt(citymap[city].wielkosc) * 1000,
+                });
+                const strefa1 = new google.maps.Circle({
+                    strokeColor: "#c93384",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#FFFACD",
+                    fillOpacity: 0.45,
+                    map,
+                    center: citymaps[city].center,
+                    radius: Math.sqrt(citymaps[city].wielkosc) * 1000,
+
+                });
+
+
+                var Gratis_label = new google.maps.Marker({
+                    position: Tomex,
+                    label: {
+                        color: '#DC143C',
+                        fontWeight: 'bold',
+                        text: 'Gratis',
+                        fontSize: "16px",
+                        align: 'right',
+                    },
+                    icon: {
+                        url: 'none_marker.png',
+                        anchor: new google.maps.Point(10, 45),
+                    },
+                    map: map
+                });
+                var ikona = {
+                    //adres obrazka
+                    url: 'https://lh3.googleusercontent.com/proxy/A4LMglOQs5yfyVEi4HUFekwDaL5ny7EEmgGkTGpFTnuYmTBtKxqqistMlARVT5mTFCpXnG-o9alQDW1hfx8f1pR-Kg',
+                    //skalowanie
+                    scaledSize: new google.maps.Size(30, 20),
+                };
+            }
+            const znacznik = new google.maps.Marker({
+                icon: ikona,
+                map: map,
+                content: "test",
+                position: Tomex,
+            })
+        }
+
+    </script>
+
+
     <link rel="stylesheet" type="text/css" href="wyglad.css">
     <link rel="icon" href="galeria/ikona.png" />
     <meta charset="utf-8" />
@@ -37,10 +121,30 @@
 
 
         <div class="zadanie">
-            <p>
-			<iframe class="mapa" style="border:0;" allowfullscreen="" loading="lazy"  src="https://www.google.com/maps/d/embed?mid=18PpaiQXFWeL9CLlNACJp6gXjc2EYoJJN"></iframe>
-                 </div>
-           <footer class="footer"><p> To miejsce stopki, kolory są dobrane tylko dla widoczności</p></footer>
+
+                <div id="map"></div>
+
+                <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMSOX0JjcygniXIch61gyDadt2tWjNUcs&callback=initMap&libraries=&v=weekly"
+                        async></script>
+        </div>
+        <footer class="footer">
+            <p> To miejsce stopki, kolory są dobrane tylko dla widoczności</p>
+
+
+
+            <div class="socials">
+                <button class="icon-btn facebook" onclick="location.href='https://www.facebook.com/PolitechnikaOpolska'" type="button">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="icon-btn instagram" onclick="location.href='https://www.instagram.com/politechnika_opolska/?hl=pl'" type="button">
+                    <i class="fab fa-instagram"></i>
+                </button>
+                <button class="icon-btn github" onclick="location.href='https://github.com/ketrab1123/Technologie_Internetowe'" type="button">
+                    <i class="fab fa-github"></i>
+                </button>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
