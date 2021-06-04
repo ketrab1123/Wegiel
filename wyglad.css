@@ -312,6 +312,10 @@ padding: 5px;
     }
 
 @media screen and (max-width: 800px) {
+
+    body {
+    width:100%;
+    }
     .column {
         -ms-flex: 50%;
         flex: 50%;
