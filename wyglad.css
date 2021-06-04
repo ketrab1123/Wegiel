@@ -180,8 +180,7 @@ ul ul .arrow {
 
 .zadanie {
     width: 100%;
-    min-height: 500px;
-    height: 100px;
+   
     margin: 0 auto;
     float: left;
     background-color: #696969;
@@ -315,15 +314,27 @@ padding: 5px;
 
     body {
     width:100%;
+    margin-left:0;
+    background-color:yellow;
+    }
+
+    .main {
+        display: block;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 0%;
+        text-align: center;
+    }
+    .nav {
+    font-size:large;
     }
     .column {
         -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
-
     }
 }
-
+/*
 @media screen and (max-width: 600px) {
     .column {
         -ms-flex: 100%;
