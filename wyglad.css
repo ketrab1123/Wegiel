@@ -310,12 +310,12 @@ padding: 5px;
         width: 100%;
     }
 
-@media screen and (max-width: 800px) {
+@media (max-device-width: 800px) {
 
     body {
-    width:100%;
-    margin-left:0;
-    background-color:yellow;
+        width:100%;
+        margin-left:0;
+        background-color:yellow;
     }
 
     .main {
