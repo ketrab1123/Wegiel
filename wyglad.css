@@ -315,7 +315,6 @@ padding: 5px;
     body {
         width:100%;
         margin-left:0;
-        background-color:yellow;
     }
 
     .main {
@@ -326,12 +325,24 @@ padding: 5px;
         text-align: center;
     }
     .nav {
-    font-size:large;
+    font-size:28px;
+    }
+    #mainmenu ul {
+        font-size: 20px;
+        border-radius: 3px;
+        background: #9E2B29;
+    }
+    .footer 
+    {
+    font-size: 17px;
     }
     .column {
         -ms-flex: 50%;
         flex: 50%;
-        max-width: 50%;
+        max-width: 98%;
+    }
+    .photo {
+    font-size: 26px;
     }
 }
 /*
