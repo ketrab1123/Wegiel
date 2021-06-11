@@ -2,7 +2,6 @@
     background-color: black;
     background-image: url("galeria/wegiel.jpg");
     background-attachment: fixed;
-    color: whitesmoke;
     background-position: center;
     margin: 0 auto; 
     display: block;
@@ -39,6 +38,7 @@ h1 {
     margin-right: auto;
 }
 .main {
+    color: whitesmoke;
     display: block;
     margin-left: 5%;
     margin-right: 5%;

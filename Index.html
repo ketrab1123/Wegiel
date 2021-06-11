@@ -2,10 +2,11 @@
 
 <html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="wyglad.css">
     <link rel="icon" href="galeria/ikona.png" />
     <link rel="stylesheet" type="text/css" href="ikony/css/all.css" />
-    <meta charset="utf-8" />
+   <meta charset="utf-8" />
     <title>Węgiel</title>
 </head>
 <body>
@@ -15,20 +16,14 @@
                 <ul id="mainmenu">
                     <li><a href="./Index.html">Strona główna</a></li>
                     <li>
-                        <a href="#">O Nas</a>
-                        <ul>
-                            <li><a href="#">Linki do odpowiednich informacji o firmie</a></li>
-                            <li><a href="#">Linki do odpowiednich informacji o firmie</a></li>
-                            <li><a href="#">Linki do odpowiednich informacji o firmie</a></li>
-                        </ul>
-                    </li>
-                    <li>
                         <a href="./galeria.html">Galeria</a>
                     </li>
                     <li>
                         <a href="./mapa.html">Kontakt</a>
                         <ul>
-                            <li><a href="#">Telefon</a></li>
+                            <li>
+                                <button style=" color: whitesmoke;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Administracja@wegiel.pl">Wyślij wiadomośc</button>
+                            </li>
                             <li><a href="./mapa.html">Mapa Dojazdu</a></li>
                         </ul>
                     </li>
@@ -55,6 +50,7 @@
 
 
 
+
             <div class="socials">
                 <button class="icon-btn facebook" onclick="location.href='https://www.facebook.com/PolitechnikaOpolska'" type="button">
                     <i class="fab fa-facebook-f"></i>
@@ -68,5 +64,54 @@
             </div>
         </footer>
     </div>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Adresat:</label>
+                            <input type="text" class="form-control" id="recipient-name" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Treść:</label>
+                            <textarea  class="form-control" id="message-text" ></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+                    <button type="button" class="btn btn-primary">Wyślij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script>
+        var exampleModal = document.getElementById('exampleModal')
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = exampleModal.querySelector('.modal-title')
+            var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+            modalTitle.textContent = 'Twoja wiadomość trafi do Administacji'
+            modalBodyInput.value = recipient
+        })
+    </script>
 </body>
 </html>
